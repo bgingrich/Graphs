@@ -23,11 +23,12 @@ world.load_graph(room_graph)
 # Print an ASCII map
 world.print_rooms()
 
-player = Player(world.starting_room)
-
+player = Player(world.starting_room, len(world.rooms))
+print('Almost Run Maze')
+player.run_maze()
 # Fill this out with directions to walk
 # traversal_path = ['n', 'n']
-traversal_path = []
+traversal_path = player.traversal_path.copy()
 
 
 
